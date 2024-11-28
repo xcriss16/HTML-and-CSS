@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tarea_formulario_en_tabla_1<TuNombre></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        td {
+            padding: 8px;
+        }
+        fieldset {
+            border: 2px solid #ccc;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Formulario de Pedido - Pedido_<TuNombre></h1>
+        
+        <form action="" method="post">
+            <!-- Información Personal -->
+            <fieldset>
+                <legend>Información Personal</legend>
+                <table>
+                    <tr>
+                        <td><label for="nombre">Nombre:</label></td>
+                        <td><input type="text" id="nombre" name="nombre" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Correo Electrónico:</label></td>
+                        <td><input type="email" id="email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="telefono">Teléfono:</label></td>
+                        <td><input type="tel" id="telefono" name="telefono" required></td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <!-- Dirección de Envío -->
+            <fieldset>
+                <legend>Dirección de Envío</legend>
+                <table>
+                    <tr>
+                        <td><label for="direccion">Dirección:</label></td>
+                        <td><input type="text" id="direccion" name="direccion" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="ciudad">Ciudad:</label></td>
+                        <td><input type="text" id="ciudad" name="ciudad" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="cp">Código Postal:</label></td>
+                        <td><input type="text" id="cp" name="cp" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pais">País:</label></td>
+                        <td><input type="text" id="pais" name="pais" required></td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <!-- Detalles del Pedido -->
+            <fieldset>
+                <legend>Detalles del Pedido</legend>
+                <table>
+                    <tr>
+                        <td><label for="producto">Producto:</label></td>
+                        <td>
+                            <select id="producto" name="producto" required>
+                                <option value="producto1">Producto 1</option>
+                                <option value="producto2">Producto 2</option>
+                                <option value="producto3">Producto 3</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="cantidad">Cantidad:</label></td>
+                        <td><input type="number" id="cantidad" name="cantidad" min="1" value="1" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="fecha">Fecha de Entrega:</label></td>
+                        <td><input type="date" id="fecha" name="fecha" required></td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <!-- Comentarios -->
+            <fieldset>
+                <legend>Comentarios Adicionales</legend>
+                <table>
+                    <tr>
+                        <td><label for="comentarios">Comentarios:</label></td>
+                        <td><textarea id="comentarios" name="comentarios" rows="4"></textarea></td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <!-- Botón de Enviar -->
+            <div class="center">
+                <button type="submit">Enviar Pedido</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
